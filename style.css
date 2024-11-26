@@ -1,11 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     background-color: black;
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,19 +14,19 @@ body{
     overflow: hidden;
 }
 
-#myh1{
+#myh1 {
     font-weight: normal;
     padding-top: 150px;
     padding-bottom: 100px;
     text-align: center;
-    width: 600px;
+    width: 80%; /* Changed from 600px to make it responsive */
     font-family: monospace;
     font-weight: bold;
     color: white;
     margin-bottom: 25px;
 }
 
-.christmas{
+.christmas {
     padding-top: 40px;
     font-size: 40px;
     color: white;
@@ -35,12 +35,12 @@ body{
     margin-bottom: 25px;
 }
 
-.countdown{
+.countdown {
     display: flex;
     transform: scale(2);
 }
 
-#time{
+#time {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,4 +50,51 @@ body{
     font-weight: bold;
     color: hsl(0, 38%, 95%);
     margin-bottom: 25px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    #myh1 {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        font-size: 1.5rem; /* Adjusted font size */
+    }
+
+    .christmas {
+        font-size: 30px; /* Smaller font size */
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .countdown {
+        transform: scale(1.5); /* Smaller scale for mobile */
+    }
+
+    #time {
+        margin: 10px;
+        font-size: 1rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #myh1 {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        font-size: 1.25rem; /* Further reduction */
+    }
+
+    .christmas {
+        font-size: 24px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .countdown {
+        transform: scale(1.2); /* Smaller scale for extra small screens */
+    }
+
+    #time {
+        margin: 5px;
+        font-size: 0.9rem; /* Adjusted font size */
+    }
 }
